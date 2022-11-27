@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    h2 {
+      font-style: italic;
+      color: yellow;
+
+    }
+
+    body {
+      background-image: url('https://www.jainuniversity.ac.in/application/themes/events/assets/images/contact/JGI-hostel.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+  <script type="text/javascript" defer>
+    function validate() {
+      var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+      var psformat = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+      var password = document.getElementById("pswrd").value;
+      var email = document.getElementById("mail").value;
+      if (password.match(psformat)) {
+        document.getElementById("x").innerHTML = " ";
+      }
+      else {
+        document.getElementById("x").innerHTML = "<fontcolor='red'>Invalid</font>";
+      }
+      if (email.match(mailformat)) {
+        document.getElementById("y").innerHTML = " ";
+      }
+      else {
+        document.getElementById("y").innerHTML = "<fontcolor='red'>Invalid</font> ";
+      }
+    }
+  </script>
+</head>
+<h2>Warden Login</h2>
+<form action="" name="forms">
+  <table border="0" height="200" width="300" style="background-color:rgb(182, 255, 216)">
+    <tr>
+      <td><strong style="width:7%;">User-id:</strong>
+        <input type="text" id="mail" name="mail" placeholder="E-mail" style="margin-left: 5% ;"><span id="y"></span>
+      </td>
+    </tr>
+    <tr>
+      <td><strong style="width:7%;">Password:</strong>
+        <input type="password" id="pswrd" name="pswrd" placeholder="password" style="margin-left:5% ;"><span
+          id="x"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <center><a href="file:///C:/Users/HP/.vscode/wardeno1.html"><input type="button" name="b" value="Login"
+              onclick="validate()"></a></center><br>
+        <span id="aa"></span>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+
+</html>
